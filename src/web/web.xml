@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-server>
+    <server>
+        <port-number>888</port-number>
+    </server>
+    <servlets>
+        <servlet>
+            <servlet-name>loginServlet</servlet-name>
+            <servlet-class>servlet.LoginServlet</servlet-class>
+        </servlet>
+        <servlet>
+            <servlet-name>registerServlet</servlet-name>
+            <servlet-class>servlet.RegisterServlet</servlet-class>
+        </servlet>
+    </servlets>
+    <mappings>
+        <servlet-mapping>
+            <servlet-name>loginServlet</servlet-name>
+            <url-pattern>/l</url-pattern>
+            <url-pattern>/log</url-pattern>
+            <url-pattern>/login</url-pattern>
+        </servlet-mapping>
+        <servlet-mapping>
+            <servlet-name>registerServlet</servlet-name>
+            <url-pattern>/r</url-pattern>
+            <url-pattern>/reg</url-pattern>
+        </servlet-mapping>
+    </mappings>
+    <accessible-paths>
+        <accessible-path>static\back\index.html</accessible-path>
+        <accessible-path>static\back\page\login\login.html</accessible-path>
+    </accessible-paths>
+</web-server>
